@@ -22,4 +22,5 @@ Given the following CFG and the parsing table, write a program to trace input st
 •	[20 points] Report file – Your report file should contain explanation of your code, in-built functions used, important checkpoints [if it is present], explanation should be short and crisp, output screenshot of your code and should not exceed more than 2 pages.
 
 2.	Following is the grammar, and parsing table.
-!(project2_cpsc323/images/cfg.png)
+
+!(/project2_cpsc323/images/cfg.png)
