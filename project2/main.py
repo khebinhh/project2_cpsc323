@@ -6,8 +6,10 @@ grammar = {
   "R": ["*FR", "/FR", "ε"],
   "F": ["(E)", "a"],
 }
+
 # Parsing table as a dictionary
 parsing_table = {}
+
 # Function to parse the input string
 def parse(input_string):
     stack = ['$', "E"]
