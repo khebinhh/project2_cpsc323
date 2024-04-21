@@ -24,3 +24,17 @@ Given the following CFG and the parsing table, write a program to trace input st
 2.	Following is the grammar, and parsing table.
 
 ![CFG chart](/images/cfg.png)
+
+![Predictive Parsing Table](/images/parsing.png)
+
+
+3.	Output:
+For the same grammar and parsing table if the input string is (a+a) $, then Output must be displayed like this along the stack implementation ( whole stack flow should be shown, though in the example only the end of the stack is shown) Example,
+```
+Input: (a+a) $
+Stack: [‘$’, ‘Q’, ‘ R’]
+Output: String is accepted/ valid.
+
+Input: (a+a) e $ Stack : [‘$’, ‘Q’ ,R’]
+Output: String is not accepted/ In valid.
+```
