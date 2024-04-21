@@ -1,5 +1,11 @@
 # Grammar rules as a dictionary
-grammar ={}
+grammar ={
+  "E": ["TQ"],
+  "Q": ["+TQ", "-TQ", "ε"],
+  "T": ["FR"],
+  "R": ["*FR", "/FR", "ε"],
+  "F": ["(E)", "a"],
+}
 # Parsing table as a dictionary
 parsing_table = {}
 # Function to parse the input string
