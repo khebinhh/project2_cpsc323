@@ -1,5 +1,5 @@
 # Grammar rules as a dictionary
-grammar ={
+grammar = {
   "E": ["TQ"],
   "Q": ["+TQ", "-TQ", "ε"],
   "T": ["FR"],
