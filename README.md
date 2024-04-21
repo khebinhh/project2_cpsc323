@@ -23,4 +23,4 @@ Given the following CFG and the parsing table, write a program to trace input st
 
 2.	Following is the grammar, and parsing table.
 
-!(/project2_cpsc323/images/cfg.png)
+![CFG chart](/project2_cpsc323/images/cfg.png)
