@@ -8,7 +8,10 @@ grammar = {
 }
 
 # Parsing table as a dictionary
-parsing_table = {}
+parsing_table = {
+  ("E", "a"): "TQ",
+  
+}
 
 # Function to parse the input string
 def parse(input_string):
