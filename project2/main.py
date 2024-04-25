@@ -10,16 +10,16 @@ grammar = {
 # Parsing table as a dictionary
 parsing_table = {
   ("E", "a"): "TQ",
-  
 }
 
 # Function to parse the input string
 def parse(input_string):
     stack = ['$', "E"]
-    input_string += '$'
+    #input_string += '$'
     index = 0
 
-    while len(stack) > 0:
+    print(f"Input: {input_string}")
+    while len(stack) > 0 and index < len(input_string):
       top = stack.pop()
       current_symbol = input_string[index]
   
@@ -28,23 +28,24 @@ def parse(input_string):
       if top == current_symbol:
         index += 1
       elif top in grammar:
-        production = parsing_table.get((top, current_symbol))
+        production = parsing_table.get((top, current_symbol), None)
         if production:
-          stack.extend(reversed(production))
+          if production != "ε":  # Don't push epsilon onto stack
+            stack.extend(reversed(list(production))) # Convert production into list
         else:
+          print("String is not accepted or invalid.")
           return False
       else:
+        print("String is not accepted or invalid.")
         return False
-  
-    return True
 
+    if len(stack) == 0 and index == len(input_string):
+      print("String is accepted or valid.")
+    else:
+      print("String is not accepted or invalid.")
 
 # Test cases of 1, 2 and 3
 test_cases = ["(a+a)*a$", "a*(a/a)$", "a(a+a)$"]
 
 for test_case in test_cases:
-    print(f"\nInput: {test_case}")
-    if parse(test_case):
-      print("String is accepted or valid.")
-    else:
-      print("String is not accepted or invalid.")
+    parse(test_case)
