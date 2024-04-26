@@ -9,7 +9,7 @@ grammar = {
 
 # Parsing table as a dictionary
 parsing_table = {
-   ("E", "("): ["T"Q"],
+   ("E", "("): ["TQ"],
    ("Q", "+"): ["+TQ"],
    ("Q", "-"): ["-TQ"],
    ("Q", ")"): ["ε"],
